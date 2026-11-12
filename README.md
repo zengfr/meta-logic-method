@@ -21,6 +21,7 @@
 meta-logic-method/
 ├── README.md                 ← 本文件：体系说明与导航
 ├── AGENTS.md                 ← AI 思维代理入口规则（AI 必读，人类可选读）
+├── SKILL.md                  ← DevEco Code 技能包入口（frontmatter + 调度引导）
 ├── GOVERNANCE.md             ← 体系治理：版本 / 修订流程 / 变更权限
 ├── CHANGELOG.md              ← 版本历史
 │
@@ -110,6 +111,7 @@ meta-logic-method/
 1. 将本目录整体放入仓库（或作为系统提示词注入）
 2. **AGENTS.md 是唯一入口**——AI 从 AGENTS.md 出发，按任务类型索引到具体文档
 3. 产出分析 / 方案时，按 AGENTS.md 第四节"思维链输出协议"输出，结论引用编号（如 "依据 M-9，此结论标记为中置信度"）
+4. 作为 DevEco Code 技能包使用时，`SKILL.md` 为加载入口（全局配置 `skills` 路径注册后重启生效），触发后仍以 AGENTS.md 为唯一规则入口
 
 ### 给人类
 

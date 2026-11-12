@@ -4,6 +4,14 @@
 
 ---
 
+## 1.0.2 — 2026-11-12
+
+技能包化（PATCH）。
+
+- 新增 `SKILL.md`：符合 DevEco Code skill 规范（frontmatter：`name` 与目录一致 + `description` 含触发条件与关键词），作为技能加载入口，正文调度引导指向 AGENTS.md
+- 全局 `~/.config/deveco/deveco.jsonc` 注册 `skills` 路径指向本仓库（配置非热加载，需重启 DevEco Code 生效；`skills.paths` 对象形式已废弃，按 schema 采用直接数组形式）
+- README 文档树与"给 AI 思维代理"使用说明同步补充 SKILL.md
+
 ## 1.0.1 — 2026-11-12
 
 第二轮实施评审修正（PATCH，体系作者授权）。
