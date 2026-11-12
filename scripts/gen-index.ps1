@@ -68,5 +68,7 @@ $content = [System.Text.StringBuilder]::new()
 [void]$content.AppendLine((Group-Table $b    '八、认知偏误（B）'))
 [void]$content.AppendLine((Group-Table $r    '九、输出模板（R）'))
 
-Set-Content -Path (Join-Path $root 'INDEX.md') -Value $content.ToString() -Encoding UTF8
+# 输出统一使用 LF 行尾（与其余文档一致），UTF-8 无 BOM
+$lfContent = $content.ToString() -replace "`r`n", "`n"
+[System.IO.File]::WriteAllText((Join-Path $root 'INDEX.md'), $lfContent, [System.Text.UTF8Encoding]::new($false))
 Write-Host "INDEX.md generated: $($rows.Count) rules (M=$($main.Count) MT=$($mt.Count) MP=$($mp.Count) ML=$($ml.Count) S=$($s.Count) W=$($w.Count) F=$($f.Count) B=$($b.Count) R=$($r.Count))"

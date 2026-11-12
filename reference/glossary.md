@@ -44,7 +44,7 @@
 | 单向门 / 双向门 | One-way / Two-way Door | 不可逆 / 可逆决策，决定决策速度（S-11.4） |
 | 事前验尸 | Premortem | 假设"已失败"倒推原因的风险预演（S-10.4） |
 | 触发重审条件 | Reconsideration Trigger | 预先声明的重开决策的具体信号（S-11.6） |
-| 决策记录 | ADR (Architecture Decision Record) | 决定 + 放弃选项 + 置信度 + 重审条件的归档（R-4） |
+| 决策记录 | ADR (Architecture Decision Record) | 决定 + 放弃选项 + 置信度 + 重审条件的归档（R-4；术语借自软件架构实践，此处泛化为任意重要决策） |
 
 ## 系统思维层
 

@@ -229,4 +229,3 @@
 | R-6 |  | 体系建议格式 | reference/cot-templates.md |
 
 
-
