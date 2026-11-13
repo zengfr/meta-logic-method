@@ -4,12 +4,22 @@
 
 ---
 
+## 1.0.3 — 2026-11-13
+
+外部评审修正（PATCH，体系作者授权）。
+
+- AGENTS.md：新增"适用边界（激活前提）"前置条款——本文件不是激活规则，仅在 meta-logic-method 技能显式激活后生效（激活条件以 SKILL.md frontmatter 为唯一事实来源）；设"未激活不适用 / 激活不扩权 / 用户指令优先 / 含混指令不自动入体系"四条【强制】边界；"任何 AI 代理在分析问题……之前必须先读本文件"等无条件表述收敛为体系激活后的条件表述
+- `workflows/01`：场景行"AI 收到含混指令"补触发限制——直接澄清可解决的先澄清，仅澄清无效或用户要求结构化梳理 / 显式调用本体系时进入 W-1，防止普通澄清请求触发多步强制流程
+- README 第五节：补"注入本身不构成激活"与"AGENTS.md 适用边界先行生效"注记
+- 收敛来源：外部评审 3 项 Medium（Excessive Agency 86% / Trigger Abuse 88% / Trigger Abuse 85%）
+- INDEX.md 幂等再生成验证通过（无编号变更）
+
 ## 1.0.2 — 2026-11-12
 
 技能包化（PATCH）。
 
-- 新增 `SKILL.md`：符合 DevEco Code skill 规范（frontmatter：`name` 与目录一致 + `description` 含触发条件与关键词），作为技能加载入口，正文调度引导指向 AGENTS.md
-- 全局 `~/.config/deveco/deveco.jsonc` 注册 `skills` 路径指向本仓库（配置非热加载，需重启 DevEco Code 生效；`skills.paths` 对象形式已废弃，按 schema 采用直接数组形式）
+- 新增 `SKILL.md`：符合 OpenCode skill 规范（frontmatter：`name` 与目录一致 + `description` 含触发条件与关键词），作为技能加载入口，正文调度引导指向 AGENTS.md
+- 全局 `~/.config/opencode/opencode.jsonc` 注册 `skills` 路径指向本仓库（配置非热加载，需重启 OpenCode 生效；`skills.paths` 对象形式已废弃，按 schema 采用直接数组形式）
 - README 文档树与"给 AI 思维代理"使用说明同步补充 SKILL.md
 
 ## 1.0.1 — 2026-11-12
